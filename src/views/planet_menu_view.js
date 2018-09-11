@@ -4,7 +4,6 @@ PlanetMenuView = function(){
 };
 
 PlanetMenuView.prototype.bindEvents = function(){
-  //  debugger;
   const allPlanets = document.querySelectorAll('.planet-menu-item');
     for(planet of allPlanets){
         planet.addEventListener('click', (event) => {
