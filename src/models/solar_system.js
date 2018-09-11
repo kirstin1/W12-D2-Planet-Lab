@@ -8,8 +8,6 @@ const SolarSystem = function(planets) {
 SolarSystem.prototype.bindEvents = function() {
     PubSub.subscribe('PlanetMenuView:SelectedPlanet', (event) => {
         const chosenPlanet = event.detail;
-        console.log(chosenPlanet);
-
         for (planet of this.planets) {
             if (chosenPlanet === planet.name) {
                 PubSub.publish('SolarSystem:ChosenPlanet', planet);
